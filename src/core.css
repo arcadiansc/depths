@@ -1,0 +1,65 @@
+/* # EndlessDepths Theme
+Theme Name: EndlessDepths Theme  
+Theme Source: https://www.endlessdepths.com 
+Description: EndlessDepths.com
+Author: HTML5andbeyond
+Author URI: https://www.html5andbeyond.com 
+Template: One  
+Template Version: 1.0.0 
+License: All Rights Reserved
+*/
+
+
+/* # Table of Contents
+- Things
+	- Stuff of Things
+*/
+
+/* # Things
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Stuff of Things
+--------------------------------------------- */
+
+body {
+  margin: 0;
+  }
+  
+  body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  
+  html, body, #canvas, #container {
+  width: 100%;
+  height: 100%;
+  }
+  
+  #canvas {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  }
+  
+  #container {
+  max-width: 960px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto 1em;
+  }
+  
+  .title {
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 3.5em;
+  text-align: center;
+  }
+  
+  .content {
+  width: 100%;
+  background-color: rgba(255,255,255,.9);
+  padding: 0.1em 1em;
+  font-family: 'Open Sans', sans-serif;
+  }

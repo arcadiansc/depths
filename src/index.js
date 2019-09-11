@@ -1,22 +1,46 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useRef, useEffect, useState } from 'react';
+import './styles.css';
+import { start } from './depths';
 
-import styles from './styles.css'
+function useWindowSize() {
+  const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window.innerWidth);
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
+  function handleResize() {
+    setHeight(window.innerHeight);
+    setWidth(window.innerWidth);
   }
 
-  render() {
-    const {
-      text
-    } = this.props
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return (() => window.removeEventListener('resize', handleResize));
+  }, []);
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+  return { height, width };
 }
+
+const EndlessDepths = () => {
+  const canvasRef = useRef();
+  const { height, width } = useWindowSize();
+
+  useEffect(() => {
+    if (canvasRef.current) {
+      start();
+    }
+  })
+  return (
+    <canvas
+      style={{
+        backgroundColor: 'rgb(0,0,0)',
+        position: 'absolute'
+      }}
+      id="starfield"
+      width={width}
+      height={height}
+      ref={canvasRef}
+    />
+  )
+}
+
+export default EndlessDepths;
+

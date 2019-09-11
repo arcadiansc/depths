@@ -1,7 +1,7 @@
 {
   "name": "depths",
-  "version": "1.0.0",
-  "description": "animated space-background ported from endlessdepths.com",
+  "version": "1.0.1",
+  "description": "animated space-background ported to React from endlessdepths.com",
   "author": "adrian-casanova",
   "license": "MIT",
   "repository": "adrian-casanova/depths",

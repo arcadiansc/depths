@@ -13,16 +13,14 @@ npm install --save depths
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'depths'
+import EndlessDepths from 'depths'
 
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+const MyApp = () => {
+  return (
+    <EndlessDepths />
+  )
 }
 ```
 
